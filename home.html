@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,41 +25,42 @@
     </script>
     <style>
         .grid-bg {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(12, 0, 255, 0.3) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(12, 0, 255, 0.3) 1px, transparent 1px);
             background-size: 40px 40px;
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.open {
             max-height: 200px;
         }
-        
+
         .accordion-trigger::after {
             content: '+';
             font-size: 24px;
             transition: transform 0.3s ease;
         }
-        
+
         .accordion-trigger.open::after {
             transform: rotate(45deg);
         }
     </style>
 </head>
+
 <body class="bg-dark-bg text-white">
     <!-- Grid Background -->
     <div class="fixed inset-0 opacity-20 pointer-events-none grid-bg"></div>
-    
+
     <!-- Main Container -->
     <div class="relative z-10 min-h-screen">
         <!-- Navbar -->
-        <nav class="w-full bg-brand-blue px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between rounded-[15px] sm:rounded-[20px] lg:rounded-[25px] mx-auto max-w-[calc(100%-16px)] sm:max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)] xl:max-w-[calc(100%-128px)] mt-4 sm:mt-6 lg:mt-8">
+        <!-- <nav class="w-full bg-brand-blue px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between rounded-[15px] sm:rounded-[20px] lg:rounded-[25px] mx-auto max-w-[calc(100%-16px)] sm:max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)] xl:max-w-[calc(100%-128px)] mt-4 sm:mt-6 lg:mt-8">
             <div class="flex items-center">
                 <div class="text-white font-bold text-lg sm:text-xl lg:text-2xl">atozpath</div>
             </div>
@@ -66,61 +68,125 @@
                 <span class="hidden sm:inline">Order Now</span>
                 <span class="sm:hidden">Order</span>
             </button>
-        </nav>
+        </nav> -->
 
+        
+                <nav
+                    class="w-full bg-[#0c00ff] px-4 sm:px-8 lg:px-16 py-4 flex items-center justify-between rounded-[25px] mx-auto max-w-[calc(100%-32px)] sm:max-w-[calc(100%-64px)] lg:max-w-[calc(100%-128px)] mt-8">
+                    <div class="flex items-center">
+                        <img src="assets/logo.png" alt="atozpath logo" class="h-8 sm:h-10 lg:h-12 w-auto" />
+                    </div>
+        
+                    <button
+                        class="bg-[#01011d] hover:bg-[#01011d]/90 text-white rounded-lg px-3 sm:px-4 lg:px-6 py-2 text-sm sm:text-base font-medium [font-family:'Aeonik-Medium',Helvetica]">
+                        <span class="hidden sm:inline">Order Now</span>
+                        <span class="sm:hidden">Order</span>
+                    </button>
+                </nav>
         <!-- Header Section -->
-        <section class="flex flex-col items-center gap-12 sm:gap-16 lg:gap-[75px] px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-[100px] relative w-full">
+        <section
+            class="flex flex-col items-center gap-12 sm:gap-16 lg:gap-[75px] px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-[100px] relative w-full">
             <!-- Blue glow effect -->
-            <div class="absolute w-[300px] sm:w-[500px] lg:w-[729px] h-[200px] sm:h-[300px] lg:h-[434px] top-[200px] sm:top-[300px] lg:top-[378px] left-1/2 transform -translate-x-1/2 lg:left-[348px] lg:transform-none bg-brand-blue/50 rounded-[200px/100px] sm:rounded-[300px/150px] lg:rounded-[364.5px/217px] blur-[100px] sm:blur-[150px] lg:blur-[231.05px]"></div>
+            <div
+                class="absolute w-[300px] sm:w-[500px] lg:w-[729px] h-[200px] sm:h-[300px] lg:h-[434px] top-[200px] sm:top-[300px] lg:top-[378px] left-1/2 transform -translate-x-1/2 lg:left-[348px] lg:transform-none bg-brand-blue/50 rounded-[200px/100px] sm:rounded-[300px/150px] lg:rounded-[364.5px/217px] blur-[100px] sm:blur-[150px] lg:blur-[231.05px]">
+            </div>
 
             <!-- Hero section -->
-            <div class="flex flex-col w-full max-w-[1212px] items-center py-4 sm:py-6 lg:py-[25px] relative">
-                <div class="flex flex-col w-full max-w-[778px] items-center gap-6 sm:gap-8 relative mb-0 sm:mb-[-25px] z-10">
-                    <!-- Trust badges -->
-                    <div class="flex items-center justify-center gap-2.5">
+           <div class="flex flex-col w-full max-w-[1212px] items-center py-[25px] relative">
+            <div class="flex flex-col w-full max-w-[778px] items-center gap-8 relative mb-[-25px] z-10">
+                <!-- Trust badges -->
+                <div class="flex items-center justify-center gap-2.5">
+                    <div class="flex items-start">
+                        <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] ml-[-3px] object-cover rounded-full border-2 border-white"
+                             alt="Customer"
+                             src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                        <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                             alt="Customer"
+                             src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                        <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                             alt="Customer"
+                             src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                        <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] mr-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                             alt="Customer"
+                             src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                    </div>
+
+                    <div class="flex flex-col items-start justify-center">
                         <div class="flex items-start">
-                            <div class="relative w-8 sm:w-10 lg:w-[41px] h-8 sm:h-10 lg:h-[41px] mt-[-3px] mb-[-3px] ml-[-3px] bg-gray-400 rounded-full border-2 border-white"></div>
-                            <div class="relative w-8 sm:w-10 lg:w-[41px] h-8 sm:h-10 lg:h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 bg-gray-500 rounded-full border-2 border-white"></div>
-                            <div class="relative w-8 sm:w-10 lg:w-[41px] h-8 sm:h-10 lg:h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 bg-gray-600 rounded-full border-2 border-white"></div>
-                            <div class="relative w-8 sm:w-10 lg:w-[41px] h-8 sm:h-10 lg:h-[41px] mt-[-3px] mb-[-3px] mr-[-3px] -ml-0.5 bg-gray-700 rounded-full border-2 border-white"></div>
+                            <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
                         </div>
-
-                        <div class="flex flex-col items-start justify-center">
-                            <div class="flex items-start">
-                                <span class="text-yellow-400 text-sm">★★★★★</span>
-                            </div>
-                            <div class="w-fit font-medium text-white text-xs sm:text-[13px] leading-[16px] sm:leading-[19.5px] whitespace-nowrap">
-                                Trusted by 500+ customers
-                            </div>
+                        <div class="w-fit font-medium text-white text-[13px] leading-[19.5px] whitespace-nowrap">
+                            Trusted by 500+ customers
                         </div>
                     </div>
+                </div>
 
-                    <!-- Hero headline and subheadline -->
-                    <div class="flex flex-col items-center gap-4 sm:gap-6 w-full">
-                        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] text-center font-bold leading-tight sm:leading-[1.2] lg:leading-[67.2px] px-2">
-                            Kickstart your freelancing career with 0 headaches
-                        </h1>
-                        <p class="w-full max-w-[620px] text-white text-sm sm:text-base lg:text-lg text-center leading-relaxed sm:leading-[27px] px-4">
-                            Land clients faster, stay organized, and earn more—without the stress.
-                        </p>
-                    </div>
+                <!-- Hero headline and subheadline -->
+                <div class="flex flex-col items-center gap-6 w-full">
+                    <h1 class="text-white text-[56px] text-center font-bold leading-[67.2px]">
+                        Kickstart your freelancing career with 0 headaches
+                    </h1>
+                    <p class="w-full max-w-[620px] text-white text-lg text-center leading-[27px]">
+                        Land clients faster, stay organized, and earn more—without the stress.
+                    </p>
+                </div>
 
-                    <!-- CTA buttons -->
-                    <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
-                        <button class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-brand-blue text-white rounded-[10px] font-medium text-sm sm:text-base hover:bg-blue-700 transition-colors">
-                            Order Now
-                        </button>
-                        <button class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-transparent text-white border border-brand-blue rounded-[10px] font-medium text-sm sm:text-base hover:bg-brand-blue/10 transition-colors">
-                            Learn more
-                        </button>
-                    </div>
+                <!-- CTA buttons -->
+                <div class="flex items-start gap-4">
+                    <button class="px-6 py-3 bg-[#0c00ff] text-white rounded-[10px] font-medium hover:bg-[#0a00e6] transition-colors">
+                        Order Now
+                    </button>
+                    <button class="px-6 py-3 bg-transparent text-white border border-[#0c00ff] rounded-[10px] font-medium hover:bg-[#0c00ff]/10 transition-colors">
+                        Learn more
+                    </button>
                 </div>
             </div>
 
-            <!-- Testimonials section -->
+<!-- Product images - equally spaced, second image slightly larger -->
+ <!-- First Book - Bundle Asset - Exact same position -->
+            <img class="hidden md:block absolute w-[120px] h-[180px] md:w-[150px] md:h-[225px] lg:w-[200px] lg:h-[300px] 
+                       top-[50px] left-[50px] 
+                       object-contain z-10"
+                 alt="Freelance Standout Blueprint Book"
+                 src="assets/BUNDLE asset 1.png"
+                 style="transform: perspective(600px) rotateY(15deg) rotateX(5deg)">
+
+            <!-- Second Book - Main Ebook - Exact same position -->
+            <img class=" hidden md:block absolute w-[180px] h-[228px] md:w-[225px] md:h-[285px] lg:w-[300px] lg:h-[380px] 
+                       top-[35px] left-[35px] 
+                       object-contain z-20"
+                 alt="Freelance Standout Blueprint Book"
+                 src="assets/Ebook 1 1.png"
+                 style="transform: perspective(600px) rotateY(15deg) rotateX(5deg)">
+
+            <!-- Third Book - Open Pages - Exact same position -->
+            <img class=" hidden md:block absolute w-[168px] h-[210px] md:w-[210px] md:h-[262px] lg:w-[280px] lg:h-[350px] 
+                       top-[50px] right-[30px] 
+                       object-contain z-0"
+                 alt="Open Book Pages"
+                 src="assets/Ebook 5 1.png"
+                 style="transform: perspective(600px) rotateY(-15deg) rotateX(5deg)">
+        </div>
+
+         <!-- Testimonials section -->
             <div class="flex flex-col items-center w-full">
                 <div class="flex flex-col w-full max-w-[560px] items-center gap-2.5 px-4">
-                    <h2 class="text-white text-2xl sm:text-3xl lg:text-[40px] leading-tight sm:leading-[1.5] lg:leading-[60px] font-bold text-center">
+                    <h2
+                        class="text-white text-2xl sm:text-3xl lg:text-[40px] leading-tight sm:leading-[1.5] lg:leading-[60px] font-bold text-center">
                         Customer testimonials
                     </h2>
                     <p class="text-white text-sm sm:text-base lg:text-lg text-center leading-relaxed sm:leading-[27px]">
@@ -128,7 +194,8 @@
                     </p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row w-full max-w-[1312px] gap-4 sm:gap-6 lg:gap-8 pt-8 sm:pt-12 lg:pt-[60px] px-4">
+                <div
+                    class="flex flex-col lg:flex-row w-full max-w-[1312px] gap-4 sm:gap-6 lg:gap-8 pt-8 sm:pt-12 lg:pt-[60px] px-4">
                     <!-- Testimonial 1 -->
                     <div class="flex-1 bg-dark-bg rounded-[15px] sm:rounded-[20px] border border-brand-blue">
                         <div class="flex flex-col items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
@@ -136,14 +203,17 @@
                                 <div class="flex items-start">
                                     <span class="text-brand-blue text-sm">★★★★★</span>
                                 </div>
-                                <p class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
-                                    Exceptional quality, unbeatable value, and loads of content. With Freelance Standout, the possibilities for my freelance hustle are endless.
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    Exceptional quality, unbeatable value, and loads of content. With Freelance
+                                    Standout, the possibilities for my freelance hustle are endless.
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 sm:gap-4 w-full">
                                 <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-400 rounded-full"></div>
                                 <div class="flex flex-col items-start flex-1">
-                                    <div class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
                                         Name Surname
                                     </div>
                                     <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
@@ -161,14 +231,18 @@
                                 <div class="flex items-start">
                                     <span class="text-brand-blue text-sm">★★★★★</span>
                                 </div>
-                                <p class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
-                                    I'm really impressed with the high-quality resources—from detailed guides to crisp video walkthroughs. The moment I checked it out this morning, I started telling my crew about it.
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    I'm really impressed with the high-quality resources—from detailed guides to crisp
+                                    video walkthroughs. The moment I checked it out this morning, I started telling my
+                                    crew about it.
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 sm:gap-4 w-full">
                                 <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-500 rounded-full"></div>
                                 <div class="flex flex-col items-start flex-1">
-                                    <div class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
                                         Name Surname
                                     </div>
                                     <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
@@ -186,14 +260,17 @@
                                 <div class="flex items-start">
                                     <span class="text-brand-blue text-sm">★★★★★</span>
                                 </div>
-                                <p class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
-                                    The insights are incredibly useful. The content nails the perfect balance of clear words, structured ideas, and smooth flow—exactly what I needed.
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    The insights are incredibly useful. The content nails the perfect balance of clear
+                                    words, structured ideas, and smooth flow—exactly what I needed.
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 sm:gap-4 w-full">
                                 <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-600 rounded-full"></div>
                                 <div class="flex flex-col items-start flex-1">
-                                    <div class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
                                         Name Surname
                                     </div>
                                     <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
@@ -207,69 +284,103 @@
             </div>
 
             <!-- Final CTA section -->
-            <div class="w-full max-w-[1312px] bg-dark-bg rounded-[15px] sm:rounded-[20px] border border-brand-blue mx-4">
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[63px] p-6 sm:p-8 lg:p-[35px]">
-                    <div class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] py-2 sm:py-4 lg:py-5 flex-1 order-2 lg:order-1">
-                        <p class="text-white text-base sm:text-lg lg:text-xl xl:text-[26px] leading-relaxed sm:leading-[1.5] lg:leading-[39px]">
-                            This product kit goes beyond standard freelancing advice—it's a complete system for transforming independent professionals into sought-after experts. Your will learn proven methods to stand out in competitive markets, craft compelling value propositions, and build lasting client relationships that lead to premium opportunities.
-                        </p>
-                        <button class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-brand-blue text-white rounded-[10px] font-medium text-sm sm:text-base hover:bg-blue-700 transition-colors">
-                            Order Now
-                        </button>
-                    </div>
-                    <div class="flex flex-col w-full lg:w-[648px] items-start order-1 lg:order-2">
-                        <div class="relative w-full h-[250px] sm:h-[300px] lg:h-[400px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg"></div>
-                    </div>
-                </div>
-            </div>
+            <div
+  class="w-full max-w-[1312px] bg-dark-bg rounded-[15px] sm:rounded-[20px] border-[1px] border-brand-blue mx-4">
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[63px] p-6 sm:p-8 lg:p-[35px]">
+    
+    <!-- LEFT SIDE: Text + Button -->
+    <div
+      class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[20px] py-1 sm:py-2 lg:py-3 flex-1 order-2 lg:order-1">
+      <p
+        class="text-white text-sm sm:text-base lg:text-lg xl:text-[22px] leading-relaxed sm:leading-[1.4] lg:leading-[30px]">
+        This product kit goes beyond standard freelancing advice—it's a complete system for
+        transforming independent professionals into sought-after experts. Your will learn proven
+        methods to stand out in competitive markets, craft compelling value propositions, and build
+        lasting client relationships that lead to premium opportunities.
+      </p>
+      <button
+        class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-2.5 bg-brand-blue text-white rounded-[10px] font-medium text-sm sm:text-base hover:bg-blue-700 transition-colors">
+        Order Now
+      </button>
+    </div>
+
+    <!-- RIGHT SIDE: Image -->
+    <div class="flex flex-col w-full lg:w-[648px] items-start order-1 lg:order-2">
+      <div class="relative w-full h-[250px] sm:h-[300px] lg:h-[400px] rounded-lg">
+        <img src="assets/book_collection.png" alt="">
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </section>
 
         <!-- Intro Section -->
-        <section class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[88px] py-12 sm:py-16 lg:py-0 relative w-full border-t border-b border-brand-blue bg-gradient-to-r from-dark-bg to-blue-900">
+        <section
+            class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[88px] py-12 sm:py-16 lg:py-0 relative w-full border-t border-b border-brand-blue bg-gradient-to-r from-dark-bg to-blue-900">
             <div class="flex flex-col lg:flex-row items-center justify-between w-full px-4 sm:px-8 lg:px-16">
                 <div class="flex-shrink-0 order-2 lg:order-1">
-                    <div class="w-full max-w-[400px] sm:max-w-[500px] lg:w-[599px] h-[300px] lg:h-[434.78px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg"></div>
+                    <div
+                        class="w-full max-w-[400px] sm:max-w-[500px] lg:w-[599px] h-[300px] lg:h-[434.78px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg">
+                    </div>
                 </div>
 
                 <div class="flex flex-col py-8 sm:py-12 lg:py-[100px] max-w-[585px] order-1 lg:order-2">
-                    <h2 class="text-xl sm:text-2xl lg:text-[32px] leading-tight lg:leading-8 font-bold text-white mb-6 sm:mb-8">
+                    <h2
+                        class="text-xl sm:text-2xl lg:text-[32px] leading-tight lg:leading-8 font-bold text-white mb-6 sm:mb-8">
                         What You'll Learn Inside <span class="text-brand-blue tracking-[-1.02px]">--</span>
                     </h2>
 
                     <ul class="space-y-4 sm:space-y-6">
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
                                 How to identify and dominate your ideal niche — no more guessing.
                             </span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
                                 Craft a unique value proposition that makes clients choose you over the competition.
                             </span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
                                 Build a professional online presence that doesn't just look good — it brings clients.
                             </span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
-                                Master the art of strategic networking and relationship-building that actually leads to opportunities.
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                                Master the art of strategic networking and relationship-building that actually leads to
+                                opportunities.
                             </span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
-                                Develop premium pricing and positioning strategies that make your work worth more — and get it.
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                                Develop premium pricing and positioning strategies that make your work worth more — and
+                                get it.
                             </span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
-                            <span class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
+                            <span
+                                class="text-brand-blue text-lg sm:text-xl lg:text-[26px] leading-[26px] mr-2 flex-shrink-0">•</span>
+                            <span
+                                class="text-white text-sm sm:text-lg lg:text-[26px] leading-relaxed lg:leading-[26px]">
                                 Set up systems for continuous growth, client retention, and long-term success.
                             </span>
                         </li>
@@ -281,9 +392,11 @@
         <!-- Resources Section -->
         <section class="flex flex-col lg:flex-row items-center justify-center py-12 sm:py-16 lg:py-0 w-full">
             <div class="flex flex-col lg:flex-row items-center justify-between w-full px-4 sm:px-8 lg:px-16">
-                <div class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] py-8 sm:py-12 lg:py-[100px] order-2 lg:order-1">
+                <div
+                    class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] py-8 sm:py-12 lg:py-[100px] order-2 lg:order-1">
                     <header class="flex items-center justify-center gap-2.5 pt-0 pb-1.5">
-                        <h2 class="w-full max-w-[585px] font-bold text-xl sm:text-2xl lg:text-[32px] leading-tight lg:leading-8">
+                        <h2
+                            class="w-full max-w-[585px] font-bold text-xl sm:text-2xl lg:text-[32px] leading-tight lg:leading-8">
                             <span class="text-white tracking-[0]">Inside the kit </span>
                             <span class="text-brand-blue tracking-[0]">--</span>
                         </h2>
@@ -291,79 +404,105 @@
 
                     <!-- Resource 1 -->
                     <div class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[25px] px-0 py-1.5">
-                        <h3 class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
+                        <h3
+                            class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
                             📚 The Freelance Success Ebook
                         </h3>
-                        <p class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
-                            Your step-by-step guide to mastering personal branding, selecting your niche, and positioning yourself for real freelance success.
+                        <p
+                            class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
+                            Your step-by-step guide to mastering personal branding, selecting your niche, and
+                            positioning yourself for real freelance success.
                         </p>
                     </div>
 
                     <!-- Resource 2 -->
                     <div class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[25px] px-0 py-1.5">
-                        <h3 class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
+                        <h3
+                            class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
                             📒 The Action Workbook
                         </h3>
-                        <p class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
-                            Practical exercises and templates to help you uncover your unique value, analyze your market, and build a clear action plan.
+                        <p
+                            class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
+                            Practical exercises and templates to help you uncover your unique value, analyze your
+                            market, and build a clear action plan.
                         </p>
                     </div>
 
                     <!-- Resource 3 -->
                     <div class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[25px] px-0 py-1.5">
-                        <h3 class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
+                        <h3
+                            class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
                             ✅ The Personal Brand Checklist
                         </h3>
-                        <p class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
-                            A complete roadmap covering everything — from research to brand-building and maintenance — so you stay consistent and effective.
+                        <p
+                            class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
+                            A complete roadmap covering everything — from research to brand-building and maintenance —
+                            so you stay consistent and effective.
                         </p>
                     </div>
 
                     <!-- Resource 4 -->
                     <div class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[25px] px-0 py-1.5">
-                        <h3 class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
+                        <h3
+                            class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
                             🤖 The AI Prompt Pack
                         </h3>
-                        <p class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
-                            Handcrafted AI-powered prompts to sharpen your messaging, level up your online presence, and communicate with clients more effectively.
+                        <p
+                            class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
+                            Handcrafted AI-powered prompts to sharpen your messaging, level up your online presence, and
+                            communicate with clients more effectively.
                         </p>
                     </div>
 
                     <!-- Resource 5 -->
                     <div class="flex flex-col items-start justify-center gap-3 sm:gap-4 lg:gap-[25px] px-0 py-1.5">
-                        <h3 class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
+                        <h3
+                            class="w-fit mt-[-1.00px] font-bold text-white text-lg sm:text-xl lg:text-[26px] tracking-[0] leading-tight lg:leading-[39px]">
                             🚀 The Advanced Strategy Guide
                         </h3>
-                        <p class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
-                            Bonus tactics to stay ahead of competitors, attract high-paying clients, and scale your freelance business without burning out.
+                        <p
+                            class="w-full max-w-[499px] font-normal text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px]">
+                            Bonus tactics to stay ahead of competitors, attract high-paying clients, and scale your
+                            freelance business without burning out.
                         </p>
                     </div>
                 </div>
 
                 <div class="flex-shrink-0 order-1 lg:order-2">
-                    <div class="relative w-full max-w-[400px] sm:max-w-[600px] lg:w-[870px] h-[600px] lg:h-[1280px] lg:mt-[-100.00px] lg:mb-[-100.00px] lg:mr-[-64.00px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg"></div>
+                    <div
+                        class="relative w-full max-w-[400px] sm:max-w-[600px] lg:w-[870px] h-[600px] lg:h-[1280px] lg:mt-[-100.00px] lg:mb-[-100.00px] lg:mr-[-64.00px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Main Content Section -->
         <div class="flex flex-col items-start gap-2.5 pb-12 sm:pb-16 lg:pb-[100px] px-4 sm:px-8 lg:px-16 w-full">
-            <div class="w-full bg-[#010014] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px_30px_0px_0px] border-none">
+            <div
+                class="w-full bg-[#010014] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px_30px_0px_0px] border-none">
                 <div class="p-0">
                     <div class="flex w-full">
-                        <div class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 bg-dark-card rounded-[20px_0px_0px_0px] sm:rounded-[25px_0px_0px_0px] lg:rounded-[30px_0px_0px_0px] border-b border-brand-blue">
-                            <div class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[51px] bg-red-500 rounded-full"></div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 bg-dark-card rounded-[20px_0px_0px_0px] sm:rounded-[25px_0px_0px_0px] lg:rounded-[30px_0px_0px_0px] border-b border-brand-blue">
+                            <div
+                                class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[51px] bg-red-500 rounded-full">
+                            </div>
                             <div class="w-full mt-2">
-                                <h3 class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
+                                <h3
+                                    class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
                                     Freelance Struggles
                                 </h3>
                             </div>
                         </div>
 
-                        <div class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 rounded-[0px_20px_0px_0px] sm:rounded-[0px_25px_0px_0px] lg:rounded-[0px_30px_0px_0px] border-b border-brand-blue">
-                            <div class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[51px] bg-green-500 rounded-full shadow-[0px_0px_25px_#59ff0040]"></div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 rounded-[0px_20px_0px_0px] sm:rounded-[0px_25px_0px_0px] lg:rounded-[0px_30px_0px_0px] border-b border-brand-blue">
+                            <div
+                                class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[51px] bg-green-500 rounded-full shadow-[0px_0px_25px_#59ff0040]">
+                            </div>
                             <div class="w-full mt-2">
-                                <h3 class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
+                                <h3
+                                    class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
                                     How this ebook solves them
                                 </h3>
                             </div>
@@ -374,35 +513,40 @@
                     <div class="w-full">
                         <!-- Row 1 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Low-paying clients
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Learn how to position yourself as a premium freelancer, attracting high-value clients.
+                                    Learn how to position yourself as a premium freelancer, attracting high-value
+                                    clients.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 2 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Constantly hunting for new work
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Discover niche strategies and client retention methods that keep opportunities coming.
+                                    Discover niche strategies and client retention methods that keep opportunities
+                                    coming.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 3 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Lack of a clear personal brand
                                 </div>
@@ -416,56 +560,64 @@
 
                         <!-- Row 4 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Difficulty pricing your services
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Master premium pricing strategies to make sure you're getting paid what you're worth.
+                                    Master premium pricing strategies to make sure you're getting paid what you're
+                                    worth.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 5 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Unstable income and project flow
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Implement systems for consistent growth and client retention, stabilizing your income.
+                                    Implement systems for consistent growth and client retention, stabilizing your
+                                    income.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 6 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Chasing clients without closing deals
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Use proven methods to refine your client messaging and improve communication for higher conversions.
+                                    Use proven methods to refine your client messaging and improve communication for
+                                    higher conversions.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 7 -->
                         <div class="flex border-none">
-                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
                                     Overwhelmed with competition
                                 </div>
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Stand out by learning how to dominate your niche and create a unique value proposition.
+                                    Stand out by learning how to dominate your niche and create a unique value
+                                    proposition.
                                 </div>
                             </div>
                         </div>
@@ -479,7 +631,8 @@
                             </div>
                             <div class="flex-1 flex items-center justify-center p-3 sm:p-4">
                                 <div class="text-white text-xs sm:text-sm lg:text-base text-center">
-                                    Get actionable strategies for building a network that brings real opportunities your way.
+                                    Get actionable strategies for building a network that brings real opportunities your
+                                    way.
                                 </div>
                             </div>
                         </div>
@@ -490,20 +643,28 @@
 
         <!-- Testimonials Section -->
         <section class="w-full flex justify-center py-0 pb-12 sm:pb-16 lg:pb-[100px] px-4 sm:px-8 lg:px-16">
-            <div class="w-full max-w-[1312px] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] border border-solid border-brand-blue bg-gradient-to-b from-blue-900 to-dark-bg">
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[100px] px-6 sm:px-12 lg:px-16 py-12 sm:py-16 lg:py-[100px]">
+            <div
+                class="w-full max-w-[1312px] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] border border-solid border-brand-blue bg-gradient-to-b from-blue-900 to-dark-bg">
+                <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[100px] px-6 sm:px-12 lg:px-16 py-12 sm:py-16 lg:py-[100px]">
                     <!-- Circular design element -->
                     <div class="flex-shrink-0 order-2 lg:order-1">
                         <div class="relative w-[250px] sm:w-[350px] lg:w-[444px] h-[250px] sm:h-[350px] lg:h-[442px]">
-                            <div class="relative w-[200px] sm:w-[280px] lg:w-[358px] h-[200px] sm:h-[280px] lg:h-[362px] top-[25px] sm:top-[35px] lg:top-[43px] left-[25px] sm:left-[35px] lg:left-[43px]">
-                                <div class="absolute w-[80px] sm:w-[110px] lg:w-[136px] h-[80px] sm:h-[110px] lg:h-[136px] top-[60px] sm:top-[85px] lg:top-[74px] left-[60px] sm:left-[85px] lg:left-[111px] rounded-full border-[15px] sm:border-[20px] lg:border-[25px] border-solid border-brand-blue"></div>
-                                <div class="absolute w-full h-full top-0 left-0 rounded-full border-[15px] sm:border-[20px] lg:border-[25px] border-solid border-brand-blue"></div>
+                            <div
+                                class="relative w-[200px] sm:w-[280px] lg:w-[358px] h-[200px] sm:h-[280px] lg:h-[362px] top-[25px] sm:top-[35px] lg:top-[43px] left-[25px] sm:left-[35px] lg:left-[43px]">
+                                <div
+                                    class="absolute w-[80px] sm:w-[110px] lg:w-[136px] h-[80px] sm:h-[110px] lg:h-[136px] top-[60px] sm:top-[85px] lg:top-[74px] left-[60px] sm:left-[85px] lg:left-[111px] rounded-full border-[15px] sm:border-[20px] lg:border-[25px] border-solid border-brand-blue">
+                                </div>
+                                <div
+                                    class="absolute w-full h-full top-0 left-0 rounded-full border-[15px] sm:border-[20px] lg:border-[25px] border-solid border-brand-blue">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Text content -->
-                    <div class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] max-w-[602px] order-1 lg:order-2">
+                    <div
+                        class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] max-w-[602px] order-1 lg:order-2">
                         <div class="text-white">
                             <h2 class="font-bold text-xl sm:text-2xl lg:text-[32px] mb-4 sm:mb-6">
                                 This kit is made for:
@@ -523,12 +684,14 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="mr-2 flex-shrink-0">✅</span>
-                                    <span>Anyone ready to build a real freelance business with premium clients, steady growth, and long-term success.</span>
+                                    <span>Anyone ready to build a real freelance business with premium clients, steady
+                                        growth, and long-term success.</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <button class="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue/90 text-white rounded-[10px] px-4 sm:px-6 py-2 sm:py-3 font-medium text-sm sm:text-base transition-colors">
+                        <button
+                            class="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue/90 text-white rounded-[10px] px-4 sm:px-6 py-2 sm:py-3 font-medium text-sm sm:text-base transition-colors">
                             Order Now
                         </button>
                     </div>
@@ -537,13 +700,17 @@
         </section>
 
         <!-- Call to Action Section -->
-        <div class="flex w-full items-start justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-[100px] relative rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] border border-solid border-[#8066b6] bg-gradient-to-b from-purple-800 to-dark-bg">
+        <div
+            class="flex w-full items-start justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-[100px] relative rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] border border-solid border-[#8066b6] bg-gradient-to-b from-purple-800 to-dark-bg">
             <div class="p-0 flex flex-col lg:flex-row items-center justify-between w-full gap-8 lg:gap-0">
                 <div class="flex flex-col items-center justify-center pt-4 sm:pt-6 lg:pt-9 order-2 lg:order-1">
-                    <div class="w-full max-w-[400px] sm:max-w-[500px] lg:w-[672px] h-[300px] lg:h-[501px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg"></div>
+                    <div
+                        class="w-full max-w-[400px] sm:max-w-[500px] lg:w-[672px] h-[300px] lg:h-[501px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg">
+                    </div>
                 </div>
 
-                <div class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] max-w-[620px] order-1 lg:order-2">
+                <div
+                    class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] max-w-[620px] order-1 lg:order-2">
                     <div class="text-xl sm:text-2xl lg:text-[32px]">
                         <span class="font-bold text-white">Your </span>
                         <span class="font-bold text-brand-purple">Free</span>
@@ -553,7 +720,8 @@
                             Ready to work for yourself? We'll show you how—for free.
                         </p>
 
-                        <div class="text-white text-sm sm:text-lg lg:text-2xl mt-4 sm:mt-6 space-y-2 sm:space-y-3 lg:space-y-4">
+                        <div
+                            class="text-white text-sm sm:text-lg lg:text-2xl mt-4 sm:mt-6 space-y-2 sm:space-y-3 lg:space-y-4">
                             <p class="flex items-start">
                                 <span class="mr-2 flex-shrink-0">✅</span>
                                 <span>Guidance on creating a solid freelance business plan</span>
@@ -577,7 +745,8 @@
                         </div>
                     </div>
 
-                    <button class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-[#40237a] rounded-[10px] border border-solid border-[#6b559c] hover:bg-[#4d2b91] text-white font-medium text-sm sm:text-base leading-6 transition-colors">
+                    <button
+                        class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-[#40237a] rounded-[10px] border border-solid border-[#6b559c] hover:bg-[#4d2b91] text-white font-medium text-sm sm:text-base leading-6 transition-colors">
                         Get for FREE now!
                     </button>
                 </div>
@@ -585,13 +754,16 @@
         </div>
 
         <!-- FAQ Section -->
-        <section class="flex flex-col w-full items-start gap-6 sm:gap-8 lg:gap-10 pt-12 sm:pt-16 lg:pt-[100px] pb-0 px-4 sm:px-8 lg:px-16 relative">
+        <section
+            class="flex flex-col w-full items-start gap-6 sm:gap-8 lg:gap-10 pt-12 sm:pt-16 lg:pt-[100px] pb-0 px-4 sm:px-8 lg:px-16 relative">
             <div class="flex flex-col w-full max-w-[768px] items-start gap-4 sm:gap-6 relative">
-                <h2 class="relative self-stretch mt-[-1.00px] font-bold text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-[0] leading-tight lg:leading-[57.6px]">
+                <h2
+                    class="relative self-stretch mt-[-1.00px] font-bold text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-[0] leading-tight lg:leading-[57.6px]">
                     FAQs
                 </h2>
 
-                <p class="self-stretch font-normal text-sm sm:text-base lg:text-lg leading-relaxed lg:leading-[27px] relative text-white tracking-[0]">
+                <p
+                    class="self-stretch font-normal text-sm sm:text-base lg:text-lg leading-relaxed lg:leading-[27px] relative text-white tracking-[0]">
                     Here Are Some Common Questions We Get Asked
                 </p>
             </div>
@@ -599,41 +771,57 @@
             <div class="w-full">
                 <!-- FAQ Item 1 -->
                 <div class="mb-3 sm:mb-4 lg:mb-5 bg-dark-card rounded-[10px] border-none">
-                    <button class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <button
+                        class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
                         Do I need prior experience to start freelancing?
                     </button>
                     <div class="accordion-content px-4 sm:px-6 pb-4 sm:pb-6 text-white text-sm sm:text-base">
-                        While experience can be helpful, many freelancers start with basic skills and learn as they go. Focus on developing a specific skill set and building a portfolio, even with personal projects, to demonstrate your capabilities to potential clients.
+                        While experience can be helpful, many freelancers start with basic skills and learn as they go.
+                        Focus on developing a specific skill set and building a portfolio, even with personal projects,
+                        to demonstrate your capabilities to potential clients.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="mb-3 sm:mb-4 lg:mb-5 bg-dark-card rounded-[10px] border-none">
-                    <button class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <button
+                        class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
                         How do I find clients quickly?
                     </button>
                     <div class="accordion-content px-4 sm:px-6 pb-4 sm:pb-6 text-white text-sm sm:text-base">
-                        Start by leveraging your existing network, creating profiles on freelance platforms, engaging on social media, and offering competitive rates for your first projects. Consistent outreach and prompt follow-ups can help you secure clients faster.
+                        Start by leveraging your existing network, creating profiles on freelance platforms, engaging on
+                        social media, and offering competitive rates for your first projects. Consistent outreach and
+                        prompt follow-ups can help you secure clients faster.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="mb-3 sm:mb-4 lg:mb-5 bg-dark-card rounded-[10px] border-none">
-                    <button class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <button
+                        class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
                         Can I freelance part-time while working a job or studying?
                     </button>
                     <div class="accordion-content px-4 sm:px-6 pb-4 sm:pb-6 text-white text-sm sm:text-base">
-                        Yes, many freelancers start part-time while maintaining other commitments. This approach allows you to build your client base gradually without the financial pressure of needing full-time income immediately.
+                        Yes, many freelancers start part-time while maintaining other commitments. This approach allows
+                        you to build your client base gradually without the financial pressure of needing full-time
+                        income immediately.
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="mb-3 sm:mb-4 lg:mb-5 bg-dark-card rounded-[10px] border-none">
-                    <button class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <button
+                        class="accordion-trigger w-full px-4 sm:px-6 py-4 sm:py-6 lg:py-7 font-bold text-white text-sm sm:text-base lg:text-lg tracking-[0] leading-relaxed lg:leading-[27px] hover:no-underline text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
                         What tools or platforms do I need to get started?
                     </button>
                     <div class="accordion-content px-4 sm:px-6 pb-4 sm:pb-6 text-white text-sm sm:text-base">
-                        Essential tools include reliable internet, a computer, communication software, and tools specific to your field. Popular freelance platforms like Upwork, Fiverr, and Freelancer can help you find initial clients.
+                        Essential tools include reliable internet, a computer, communication software, and tools
+                        specific to your field. Popular freelance platforms like Upwork, Fiverr, and Freelancer can help
+                        you find initial clients.
                     </div>
                 </div>
             </div>
@@ -644,7 +832,7 @@
         function toggleAccordion(button) {
             const content = button.nextElementSibling;
             const isOpen = content.classList.contains('open');
-            
+
             // Close all accordions
             document.querySelectorAll('.accordion-content').forEach(item => {
                 item.classList.remove('open');
@@ -652,7 +840,7 @@
             document.querySelectorAll('.accordion-trigger').forEach(item => {
                 item.classList.remove('open');
             });
-            
+
             // Open clicked accordion if it wasn't already open
             if (!isOpen) {
                 content.classList.add('open');
@@ -661,4 +849,5 @@
         }
     </script>
 </body>
+
 </html>
