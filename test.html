@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced FAQ Section</title>
+    <script src="tailwind3.4.16.css"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-card': '#1a1a1a',
+                        'dark-bg': '#0f0f0f',
+                        'accent': '#3b82f6',
+                        'accent-hover': '#2563eb'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 200px;
+            transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+        }
+        
+        .accordion-trigger .icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-trigger.active .icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .faq-item:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            position: relative;
+        }
+        
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .number-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg">
+    <!-- FAQ Section -->
+    <section class="section-bg flex flex-col w-full items-center gap-6 sm:gap-8 lg:gap-12 pt-12 sm:pt-16 lg:pt-[100px] pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-8 lg:px-16 relative min-h-screen">
+        <!-- Section Header -->
+        <div class="flex flex-col w-full max-w-4xl items-center text-center gap-4 sm:gap-6 relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full border border-accent/20 backdrop-blur-sm">
+                <div class="w-2 h-2 bg-accent rounded-full pulse-animation"></div>
+                <span class="text-accent text-sm font-medium">Support</span>
+            </div>
+            
+            <h2 class="gradient-text font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
+                Frequently Asked Questions
+            </h2>
+
+            <p class="max-w-2xl font-normal text-base sm:text-lg lg:text-xl leading-relaxed text-gray-300">
+                Here are some common questions we get asked about starting your freelancing journey
+            </p>
+            
+            <!-- Decorative line -->
+            <div class="w-24 h-1 bg-gradient-to-r from-accent to-purple-500 rounded-full"></div>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="w-full max-w-4xl relative z-10">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item mb-4 sm:mb-5 lg:mb-6 bg-dark-card/80 backdrop-blur-sm rounded-2xl overflow-hidden">
+                <div class="flex items-start gap-4 p-1">
+                    <div class="number-badge flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base mt-4 ml-4">
+                        01
+                    </div>
+                    <div class="flex-1">
+                        <button
+                            class="accordion-trigger w-full px-4 sm:px-6 py-5 sm:py-6 lg:py-7 font-bold text-white text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed hover:text-accent text-left flex justify-between items-center transition-colors"
+                            onclick="toggleAccordion(this)">
+                            Do I need prior experience to start freelancing?
+                            <svg class="icon w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-4 sm:px-6 pb-0 text-gray-300 text-sm sm:text-base leading-relaxed">
+                            <div class="pb-5 sm:pb-6 border-t border-gray-700/50 pt-4 mt-2">
+                                While experience can be helpful, many freelancers start with basic skills and learn as they go.
+                                Focus on developing a specific skill set and building a portfolio, even with personal projects,
+                                to demonstrate your capabilities to potential clients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item mb-4 sm:mb-5 lg:mb-6 bg-dark-card/80 backdrop-blur-sm rounded-2xl overflow-hidden">
+                <div class="flex items-start gap-4 p-1">
+                    <div class="number-badge flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base mt-4 ml-4">
+                        02
+                    </div>
+                    <div class="flex-1">
+                        <button
+                            class="accordion-trigger w-full px-4 sm:px-6 py-5 sm:py-6 lg:py-7 font-bold text-white text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed hover:text-accent text-left flex justify-between items-center transition-colors"
+                            onclick="toggleAccordion(this)">
+                            How do I find clients quickly?
+                            <svg class="icon w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-4 sm:px-6 pb-0 text-gray-300 text-sm sm:text-base leading-relaxed">
+                            <div class="pb-5 sm:pb-6 border-t border-gray-700/50 pt-4 mt-2">
+                                Start by leveraging your existing network, creating profiles on freelance platforms, engaging on
+                                social media, and offering competitive rates for your first projects. Consistent outreach and
+                                prompt follow-ups can help you secure clients faster.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item mb-4 sm:mb-5 lg:mb-6 bg-dark-card/80 backdrop-blur-sm rounded-2xl overflow-hidden">
+                <div class="flex items-start gap-4 p-1">
+                    <div class="number-badge flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base mt-4 ml-4">
+                        03
+                    </div>
+                    <div class="flex-1">
+                        <button
+                            class="accordion-trigger w-full px-4 sm:px-6 py-5 sm:py-6 lg:py-7 font-bold text-white text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed hover:text-accent text-left flex justify-between items-center transition-colors"
+                            onclick="toggleAccordion(this)">
+                            Can I freelance part-time while working a job or studying?
+                            <svg class="icon w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-4 sm:px-6 pb-0 text-gray-300 text-sm sm:text-base leading-relaxed">
+                            <div class="pb-5 sm:pb-6 border-t border-gray-700/50 pt-4 mt-2">
+                                Yes, many freelancers start part-time while maintaining other commitments. This approach allows
+                                you to build your client base gradually without the financial pressure of needing full-time
+                                income immediately.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item mb-4 sm:mb-5 lg:mb-6 bg-dark-card/80 backdrop-blur-sm rounded-2xl overflow-hidden">
+                <div class="flex items-start gap-4 p-1">
+                    <div class="number-badge flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base mt-4 ml-4">
+                        04
+                    </div>
+                    <div class="flex-1">
+                        <button
+                            class="accordion-trigger w-full px-4 sm:px-6 py-5 sm:py-6 lg:py-7 font-bold text-white text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed hover:text-accent text-left flex justify-between items-center transition-colors"
+                            onclick="toggleAccordion(this)">
+                            What tools or platforms do I need to get started?
+                            <svg class="icon w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-4 sm:px-6 pb-0 text-gray-300 text-sm sm:text-base leading-relaxed">
+                            <div class="pb-5 sm:pb-6 border-t border-gray-700/50 pt-4 mt-2">
+                                Essential tools include reliable internet, a computer, communication software, and tools
+                                specific to your field. Popular freelance platforms like Upwork, Fiverr, and Freelancer can help
+                                you find initial clients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-8 sm:mt-12 text-center relative z-10">
+            <p class="text-gray-400 text-base sm:text-lg mb-6">
+                Still have questions? We're here to help!
+            </p>
+            <button class="px-8 py-4 bg-gradient-to-r from-accent to-purple-600 text-white font-semibold rounded-xl hover:from-accent-hover hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Contact Support
+            </button>
+        </div>
+    </section>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content.active').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                }
+            });
+            
+            // Toggle current accordion
+            if (!isActive) {
+                content.classList.add('active');
+                button.classList.add('active');
+            } else {
+                content.classList.remove('active');
+                button.classList.remove('active');
+            }
+        }
+
+        // Add smooth scroll behavior and initial animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate FAQ items on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply initial styles and observe FAQ items
+            document.querySelectorAll('.faq-item').forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
