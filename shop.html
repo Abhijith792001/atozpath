@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Standout - Kickstart Your Career</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#0c00ff',
+                        'brand-purple': '#b378cf',
+                        'dark-bg': '#01011d',
+                        'dark-card': '#040043',
+
+
+                        'accent': '#3b82f6',
+                        'accent-hover': '#2563eb'
+                    },
+                    fontFamily: {
+                        'aeonik': ['Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(12, 0, 255, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(12, 0, 255, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .accordion-content.active {
+            max-height: 200px;
+            transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+        }
+
+        .accordion-trigger .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-trigger.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .faq-item:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-bg {
+            background: linear-gradient(rgba(12, 0, 255, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(12, 0, 255, 0.3) 1px, transparent 1px);
+            position: relative;
+        }
+
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .number-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        @media (max-width: 1215px) {
+            .d-none-header {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-white">
+    <!-- Grid Background -->
+    <div class="fixed inset-0 opacity-20 overflow-auto no-scrollbar pointer-events-none grid-bg"></div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 min-h-screen">
+        <!-- Navbar -->
+        <!-- <nav class="w-full bg-brand-blue px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between rounded-[15px] sm:rounded-[20px] lg:rounded-[25px] mx-auto max-w-[calc(100%-16px)] sm:max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)] xl:max-w-[calc(100%-128px)] mt-4 sm:mt-6 lg:mt-8">
+            <div class="flex items-center">
+                <div class="text-white font-bold text-lg sm:text-xl lg:text-2xl">atozpath</div>
+            </div>
+            <button class="bg-dark-bg hover:bg-dark-bg/90 text-white rounded-lg px-3 sm:px-4 lg:px-6 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors">
+                <span class="hidden sm:inline">Order Now</span>
+                <span class="sm:hidden">Order</span>
+            </button>
+        </nav> -->
+
+
+        <nav
+            class="w-full bg-[#0c00ff] px-4 sm:px-8 lg:px-16 py-4 flex items-center justify-between rounded-[25px] mx-auto max-w-[calc(100%-32px)] sm:max-w-[calc(100%-64px)] lg:max-w-[calc(100%-128px)] mt-8">
+            <div class="flex items-center">
+                <img src="assets/logo.png" alt="atozpath logo" class="h-8 sm:h-10 lg:h-12 w-auto" />
+            </div>
+
+            <button
+                class="bg-[#01011d] hover:bg-[#01011d]/90 text-white rounded-lg px-3 sm:px-4 lg:px-6 py-2 text-sm sm:text-base font-medium [font-family:'Aeonik-Medium',Helvetica]">
+                <span class="hidden sm:inline">Order Now</span>
+                <span class="sm:hidden">Order</span>
+            </button>
+        </nav>
+        <!-- Header Section -->
+        <section
+            class="flex flex-col items-center gap-12 sm:gap-16 lg:gap-[75px] px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-[100px] relative w-full">
+            <!-- Blue glow effect -->
+            <div
+                class="absolute w-[300px] sm:w-[500px] lg:w-[729px] h-[200px] sm:h-[300px] lg:h-[434px] top-[200px] sm:top-[300px] lg:top-[378px] left-1/2 transform -translate-x-1/2 lg:left-[348px] lg:transform-none bg-brand-blue/50 rounded-[200px/100px] sm:rounded-[300px/150px] lg:rounded-[364.5px/217px] blur-[100px] sm:blur-[150px] lg:blur-[231.05px]">
+            </div>
+
+            <!-- Hero section -->
+            <div class="flex reveal-bottom flex-col w-full max-w-[1212px] items-center py-[25px] relative">
+                <div class="flex flex-col w-full max-w-[778px] items-center gap-8 relative mb-[-25px] z-10">
+                    <!-- Trust badges -->
+                    <div class="flex items-center justify-center gap-2.5">
+                        <div class="flex items-start">
+                            <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] ml-[-3px] object-cover rounded-full border-2 border-white"
+                                alt="Customer"
+                                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                            <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                                alt="Customer"
+                                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                            <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                                alt="Customer"
+                                src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                            <img class="relative w-[41px] h-[41px] mt-[-3px] mb-[-3px] mr-[-3px] -ml-0.5 object-cover rounded-full border-2 border-white"
+                                alt="Customer"
+                                src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop">
+                        </div>
+
+                        <div class="flex flex-col items-start justify-center">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <div class="w-fit font-medium text-white text-[13px] leading-[19.5px] whitespace-nowrap">
+                                Trusted by 500+ customers
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero headline and subheadline -->
+                    <div class="flex flex-col items-center gap-6 w-full">
+                        <h1 class="text-white text-[56px] text-center font-bold leading-[67.2px]">
+                            Kickstart your freelancing career with 0 headaches
+                        </h1>
+                        <p class="w-full max-w-[620px] text-white text-lg text-center leading-[27px]">
+                            Land clients faster, stay organized, and earn more—without the stress.
+                        </p>
+                    </div>
+
+                    <!-- CTA buttons -->
+                    <div class="flex items-start gap-4">
+                        <button
+                            class="px-6 py-3 bg-[#0c00ff] text-white rounded-[10px] font-medium hover:bg-[#0a00e6] transition-colors">
+                            Order Now
+                        </button>
+                        <button
+                            class="px-6 py-3 bg-transparent text-white border border-[#0c00ff] rounded-[10px] font-medium hover:bg-[#0c00ff]/10 transition-colors">
+                            Learn more
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product images - equally spaced, second image slightly larger -->
+                <!-- First Book - Bundle Asset - Exact same position -->
+                <img class=" d-none-header absolute w-[120px] h-[180px] md:w-[150px] md:h-[225px] lg:w-[200px] lg:h-[300px] 
+                       top-[50px] left-[50px] 
+                       object-contain z-10" alt="Freelance Standout Blueprint Book" src="assets/BUNDLE asset 1.png"
+                    style="transform: perspective(600px) rotateY(15deg) rotateX(5deg)">
+
+                <!-- Second Book - Main Ebook - Exact same position -->
+                <img class=" d-none-header absolute w-[180px] h-[228px] md:w-[225px] md:h-[285px] lg:w-[300px] lg:h-[380px] 
+                       top-[35px] left-[35px] 
+                       object-contain z-20" alt="Freelance Standout Blueprint Book" src="assets/Ebook 1 1.png"
+                    style="transform: perspective(600px) rotateY(15deg) rotateX(5deg)">
+
+                <!-- Third Book - Open Pages - Exact same position -->
+                <img class=" d-none-header absolute w-[168px] h-[210px] md:w-[210px] md:h-[262px] lg:w-[280px] lg:h-[350px] 
+                       top-[50px] right-[30px] 
+                       object-contain z-0" alt="Open Book Pages" src="assets/Ebook 5 1.png"
+                    style="transform: perspective(600px) rotateY(-15deg) rotateX(5deg)">
+            </div>
+
+            <!-- Testimonials section -->
+            <div class="flex reveal-left flex-col items-center w-full">
+                <div class="flex flex-col w-full max-w-[560px] items-center gap-2.5 px-4">
+                    <h2
+                        class="text-white text-2xl sm:text-3xl lg:text-[40px] leading-tight sm:leading-[1.5] lg:leading-[60px] font-bold text-center">
+                        Customer testimonials
+                    </h2>
+                    <p class="text-white text-sm sm:text-base lg:text-lg text-center leading-relaxed sm:leading-[27px]">
+                        What people are saying about us
+                    </p>
+                </div>
+
+                <div
+                    class="flex flex-col lg:flex-row w-full max-w-[1312px] gap-4 sm:gap-6 lg:gap-8 pt-8 sm:pt-12 lg:pt-[60px] px-4">
+                    <!-- Testimonial 1 -->
+                    <div class="flex-1 bg-dark-bg rounded-[15px] sm:rounded-[20px] border border-brand-blue">
+                        <div class="flex flex-col items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                            <div class="flex flex-col items-start gap-4 sm:gap-6">
+                                <div class="flex items-start">
+                                    <span class="text-brand-blue text-sm">★★★★★</span>
+                                </div>
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    Exceptional quality, unbeatable value, and loads of content. With Freelance
+                                    Standout, the possibilities for my freelance hustle are endless.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 sm:gap-4 w-full">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-400 rounded-full"></div>
+                                <div class="flex flex-col items-start flex-1">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                        Name Surname
+                                    </div>
+                                    <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
+                                        Position, Company name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="flex-1 bg-dark-bg rounded-[15px] sm:rounded-[20px] border border-brand-blue">
+                        <div class="flex flex-col items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                            <div class="flex flex-col items-start gap-4 sm:gap-6">
+                                <div class="flex items-start">
+                                    <span class="text-brand-blue text-sm">★★★★★</span>
+                                </div>
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    I'm really impressed with the high-quality resources—from detailed guides to crisp
+                                    video walkthroughs. The moment I checked it out this morning, I started telling my
+                                    crew about it.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 sm:gap-4 w-full">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-500 rounded-full"></div>
+                                <div class="flex flex-col items-start flex-1">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                        Name Surname
+                                    </div>
+                                    <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
+                                        Position, Company name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="flex-1 bg-dark-bg rounded-[15px] sm:rounded-[20px] border border-brand-blue">
+                        <div class="flex flex-col items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                            <div class="flex flex-col items-start gap-4 sm:gap-6">
+                                <div class="flex items-start">
+                                    <span class="text-brand-blue text-sm">★★★★★</span>
+                                </div>
+                                <p
+                                    class="w-full text-white text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-[27px]">
+                                    The insights are incredibly useful. The content nails the perfect balance of clear
+                                    words, structured ideas, and smooth flow—exactly what I needed.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 sm:gap-4 w-full">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gray-600 rounded-full"></div>
+                                <div class="flex flex-col items-start flex-1">
+                                    <div
+                                        class="w-full font-bold text-white text-sm sm:text-base leading-5 sm:leading-6">
+                                        Name Surname
+                                    </div>
+                                    <div class="w-full text-white text-xs sm:text-base leading-4 sm:leading-6">
+                                        Position, Company name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA section -->
+            <div
+                class="w-full max-w-[1312px] bg-dark-bg rounded-[15px] sm:rounded-[20px] border-[1px] border-brand-blue mx-4">
+                <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[63px] p-6 sm:p-8 lg:p-[35px]">
+                    <div
+                        class="flex flex-col items-start justify-center gap-4 sm:gap-6 lg:gap-[25px] py-2 sm:py-4 lg:py-5 flex-1 order-2 lg:order-1">
+                        <p
+                            class="text-white reveal-bottom  text-base sm:text-xl lg:text-xl xl:text-[26px] leading-relaxed sm:leading-[1.5] lg:leading-[39px]">
+                            This product kit goes beyond standard freelancing advice—it's a complete system for
+                            transforming independent professionals into sought-after experts. Your will learn proven
+                            methods to stand out in competitive markets, craft compelling value propositions, and build
+                            lasting client relationships that lead to premium opportunities.
+                        </p>
+                        <button
+                            class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-brand-blue text-white rounded-[10px] font-medium text-sm sm:text-base hover:bg-blue-700 transition-colors">
+                            Order Now
+                        </button>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-[648px] items-start order-1 lg:order-2">
+                        <div class="relative w-full h-[250px] sm:h-[300px] lg:h-[400px]">
+                            <img src="assets/book_collection.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </section>
+</div> <!-- End of Main Container -->
+</body>
+</html>
