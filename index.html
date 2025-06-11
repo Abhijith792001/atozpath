@@ -396,7 +396,7 @@
 
         <!-- Intro Section -->
 
-        <section class="relative w-ful min-h-screen overflow-hidden"
+        <section class="relative w-full min-h-screen overflow-hidden"
             style="background: linear-gradient(135deg, #01011d 0%, #020237 50%, #030452 100%)">
             <!-- Decorative elements -->
             <div class="absolute inset-0">
@@ -411,7 +411,7 @@
                     <!-- Image Section -->
                     <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
                         <div class="relative group">
-                            <div class="absolute rounded-2xl bg-tranparent transition-all duration-500"></div>
+                            <div class="absolute rounded-2xl bg-transparent transition-all duration-500"></div>
                             <div class="relative w-full">
                                 <img src="assets/book_collection.png"
                                     alt="Open book preview showing introduction and content pages"
@@ -424,7 +424,7 @@
                     </div>
 
                     <!-- Content Section -->
-                    <div class="order-1 lg:order-2  reveal-left space-y-12">
+                    <div class="order-1 lg:order-2 reveal-left space-y-12">
                         <div class="space-y-6">
                             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                                 What You'll Learn
@@ -594,102 +594,169 @@
         </section>
 
         <!-- Main Content Section -->
-        <section class="w-full py-16 lg:py-24 bg-[#01011d]">
-            <div class="container mx-auto max-w-7xl px-4 sm:px-8 lg:px-16">
-
-                <!-- Header -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                    <div class="bg-[#010014] rounded-2xl border border-[#1e293b] p-6 text-center">
-                        <img src="assets/Subtract.png" alt="Struggles" class="w-12 h-12 mx-auto mb-3">
-                        <h3 class="text-xl lg:text-2xl font-bold text-white">Freelance Struggles</h3>
-                    </div>
-                    <div class="bg-[#010014] rounded-2xl border border-[#1e293b] p-6 text-center">
-                        <img src="assets/Check_round_fill@4x.png" alt="Solutions" class="w-12 h-12 mx-auto mb-3">
-                        <h3 class="text-xl lg:text-2xl font-bold text-white">How This Ebook Solves Them</h3>
-                    </div>
-                </div>
-
-                <!-- Card Rows -->
-                <div class="grid grid-cols-1 gap-6">
-
-                    <!-- Card Item -->
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white text-base lg:text-lg font-semibold text-center sm:text-left">
-                            Low-paying clients
+        <div class="flex flex-col items-start gap-2.5 pb-12 sm:pb-16 lg:pb-[100px] px-4 sm:px-8 lg:px-16 w-full">
+            <div
+                class="w-full bg-[#010014] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px_30px_0px_0px] border-none">
+                <div class="p-0">
+                    <div class="flex w-full">
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 bg-dark-card rounded-[20px_0px_0px_0px] sm:rounded-[25px_0px_0px_0px] lg:rounded-[30px_0px_0px_0px] border-b border-brand-blue">
+                            <div class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[51px] ">
+                                <img src="assets/Subtract.png" alt="">
+                            </div>
+                            <div class="w-full mt-2">
+                                <h3
+                                    class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
+                                    Freelance Struggles
+                                </h3>
+                            </div>
                         </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Learn how to position yourself as a premium freelancer, attracting high-value clients.
-                        </div>
-                    </div>
 
-                    <!-- Repeat for each item -->
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Constantly hunting for new work
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Discover niche strategies and client retention methods that keep opportunities coming.
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 rounded-[0px_20px_0px_0px] sm:rounded-[0px_25px_0px_0px] lg:rounded-[0px_30px_0px_0px] border-b border-brand-blue">
+                            <div class="relative w-10 sm:w-12 lg:w-[51px] h-10 sm:h-12 lg:h-[52px] ">
+                                <img src="assets/Check_round_fill@4x.png" alt="">
+                            </div>
+                            <div class="w-full mt-2">
+                                <h3
+                                    class="font-bold text-white text-sm sm:text-lg lg:text-xl text-center leading-tight lg:leading-[30px]">
+                                    How this ebook solves them
+                                </h3>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Lack of a clear personal brand
+                    <!-- Comparison Table -->
+                    <div class="w-full">
+                        <!-- Row 1 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-whitev text-xs sm:text-sm lg:text-base text-center">
+                                    Low-paying clients
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Learn how to position yourself as a premium freelancer, attracting high-value
+                                    clients.
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Build a professional online presence that converts, giving you authority and trust.
+
+                        <!-- Row 2 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Constantly hunting for new work
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Discover niche strategies and client retention methods that keep opportunities
+                                    coming.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Lack of a clear personal brand
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Build a professional online presence that converts, giving you authority and trust.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Difficulty pricing your services
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Master premium pricing strategies to make sure you're getting paid what you're
+                                    worth.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Unstable income and project flow
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Implement systems for consistent growth and client retention, stabilizing your
+                                    income.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Chasing clients without closing deals
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Use proven methods to refine your client messaging and improve communication for
+                                    higher conversions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex border-none">
+                            <div
+                                class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Overwhelmed with competition
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 border-b border-brand-blue">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Stand out by learning how to dominate your niche and create a unique value
+                                    proposition.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex border-none">
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4 bg-dark-card">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Struggling with marketing and networking
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-center p-3 sm:p-4">
+                                <div class="text-white text-xs sm:text-sm lg:text-base text-center">
+                                    Get actionable strategies for building a network that brings real opportunities your
+                                    way.
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Difficulty pricing your services
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Master premium pricing strategies to make sure you're getting paid what you're worth.
-                        </div>
-                    </div>
-
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Unstable income and project flow
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Implement systems for consistent growth and client retention, stabilizing your income.
-                        </div>
-                    </div>
-
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Chasing clients without closing deals
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Use proven methods to refine your client messaging and improve communication for higher
-                            conversions.
-                        </div>
-                    </div>
-
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Overwhelmed with competition
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Stand out by learning how to dominate your niche and create a unique value proposition.
-                        </div>
-                    </div>
-
-                    <div class="bg-[#010014] border border-[#1e293b] rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-                        <div class="flex-1 text-white font-semibold text-base lg:text-lg text-center sm:text-left">
-                            Struggling with marketing and networking
-                        </div>
-                        <div class="flex-1 text-[#d1d5db] text-base lg:text-lg text-center sm:text-left">
-                            Get actionable strategies for building a network that brings real opportunities your way.
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Testimonials Section -->
         <section class="w-full flex justify-center py-0 pb-12 sm:pb-16 lg:pb-[100px] px-4 sm:px-8 lg:px-16">
